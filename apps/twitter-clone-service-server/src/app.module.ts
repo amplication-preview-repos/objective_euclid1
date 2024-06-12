@@ -1,3 +1,4 @@
+import { RedisModule } from "./redis/redis.module";
 import { Module } from "@nestjs/common";
 import { TweetModule } from "./tweet/tweet.module";
 import { FollowModule } from "./follow/follow.module";
@@ -43,6 +44,7 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
       inject: [ConfigService],
       imports: [ConfigModule],
     }),
+    RedisModule,
   ],
   providers: [],
 })
